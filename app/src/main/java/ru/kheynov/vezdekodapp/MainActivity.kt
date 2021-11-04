@@ -6,15 +6,12 @@ import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.os.Environment
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import java.io.*
-import java.net.URI
 
 
 class MainActivity : AppCompatActivity() {
@@ -24,7 +21,6 @@ class MainActivity : AppCompatActivity() {
 		Manifest.permission.WRITE_EXTERNAL_STORAGE
 	)
 	private var filePath = ""
-	val videoUri = "file:///storage/emulated/0/videos/test_video.mp4"
 
 	private lateinit var button_task10: Button
 	private lateinit var button_task20: Button
@@ -60,8 +56,8 @@ class MainActivity : AppCompatActivity() {
 
 		button_choose_file.setOnClickListener {
 			val photoPickerIntent = Intent(Intent.ACTION_GET_CONTENT)
-			photoPickerIntent.type = "video/*";
-			startActivityForResult(photoPickerIntent, 1);
+			photoPickerIntent.type = "video/*"
+			startActivityForResult(photoPickerIntent, 1)
 		}
 
 		button_task10.setOnClickListener {
