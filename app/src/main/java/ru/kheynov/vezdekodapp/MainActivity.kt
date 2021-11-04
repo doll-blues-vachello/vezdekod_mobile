@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
 	private var filePath = ""
 
 	private lateinit var button_task10: Button
-	private lateinit var button_task20: Button
-	private lateinit var button_task30: Button
+//	private lateinit var button_task20: Button
+//	private lateinit var button_task30: Button
 	private lateinit var button_choose_file: Button
 	private lateinit var tv_file_info: TextView
 
@@ -49,8 +49,8 @@ class MainActivity : AppCompatActivity() {
 		verifyStoragePermissions(this)
 
 		button_task10 = findViewById(R.id.button_task10)
-		button_task20 = findViewById(R.id.button_task20)
-		button_task30 = findViewById(R.id.button_task30)
+//		button_task20 = findViewById(R.id.button_task20)
+//		button_task30 = findViewById(R.id.button_task30)
 		button_choose_file = findViewById(R.id.button_choose_file)
 		tv_file_info = findViewById(R.id.tv_file_info)
 
@@ -69,24 +69,24 @@ class MainActivity : AppCompatActivity() {
 				Toast.makeText(this, "Please choose a file first", Toast.LENGTH_SHORT).show()
 			}
 		}
-		button_task20.setOnClickListener {
-			if (!checkFilePathIsEmpty(filePath)) {
-				val intent = Intent(this, Task10::class.java)
-				intent.putExtra("file_path", filePath)
-				startActivity(intent)
-			} else {
-				Toast.makeText(this, "Please choose a file first", Toast.LENGTH_SHORT).show()
-			}
-		}
-		button_task30.setOnClickListener {
-			if (!checkFilePathIsEmpty(filePath)) {
-				val intent = Intent(this, Task10::class.java)
-				intent.putExtra("file_path", filePath)
-				startActivity(intent)
-			} else {
-				Toast.makeText(this, "Please choose a file first", Toast.LENGTH_SHORT).show()
-			}
-		}
+//		button_task20.setOnClickListener {
+//			if (!checkFilePathIsEmpty(filePath)) {
+//				val intent = Intent(this, Task10::class.java)
+//				intent.putExtra("file_path", filePath)
+//				startActivity(intent)
+//			} else {
+//				Toast.makeText(this, "Please choose a file first", Toast.LENGTH_SHORT).show()
+//			}
+//		}
+//		button_task30.setOnClickListener {
+//			if (!checkFilePathIsEmpty(filePath)) {
+//				val intent = Intent(this, Task10::class.java)
+//				intent.putExtra("file_path", filePath)
+//				startActivity(intent)
+//			} else {
+//				Toast.makeText(this, "Please choose a file first", Toast.LENGTH_SHORT).show()
+//			}
+//		}
 
 	}
 
